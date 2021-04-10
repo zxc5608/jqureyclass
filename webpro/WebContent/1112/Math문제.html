@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<link rel="stylesheet" href="../css/public.css">
+<style>
+</style>
+<script>
+	arr=["가위","바위","보"]; //arr[0],arr[1],arr[2];
+function proc1() {
+	ran= Math.floor(Math.random()*3);
+	com=arr[ran];
+// 	if(ran==0)com="가위";
+// 	else if(ran==1)com="바위";
+// 	else if(ran==2)com ="보";
+	
+	//사용자입력
+	input= prompt("가위바위보");
+	res="";
+	res+="com="+com+ "<br>";
+	res+="input="+com+ "<br>";
+	//비교
+	if(input== com){
+		res+="비겼다";
+	}else if(input=="가위 "&&com=="보"
+			||input=="바위"&&com=="가위"
+			||input =="보"&&com=="바위"){
+		res+= "이겼다";
+		
+	}else{
+		
+		res+="졌다.";
+	}
+	document.getElementById('result1').innerHTML = res;
+}
+function proc2() {
+	arr= new Array
+	
+	while(true){
+		//랜덤발생 1~45
+		lotto= Math.floor(Math.random()*45+1);
+		//배열에 이미 있는지 비교 - indexOf
+		idx=arr.indexOf(lotto);
+		
+		
+		if(idx==-1) arr.push(lotto)//배열에 추가
+			
+		if(arr.length>=6){
+		break;
+		}
+		//break조건
+	}
+	//배열출력
+	document.getElementById('result2').innerHTML = arr;
+
+}
+</script>
+</head>
+<body>
+
+<div class="box">
+	<h3>가위바위보</h3>
+	
+	랜덤을 이용해서 컴퓨터의 가위바위보를 결정<br>
+	사용자의 가위바위보는 입력-prompt<br>
+	이기는 경우 판별<br>
+	<input type="button" value="확인" onclick= "proc1()">
+	<br>
+	<div id ="result1"></div> 
+
+</div>
+
+<div class="box">
+	<h3>로또번호</h3>
+	
+	랜덤을 이용해서1~45사이의 값을발생<br>
+	발생된값을 배열에 추가한다<br>
+	발생된 값이 이미 배열에 저장되어있는 값이면 추가하지 않는다<br>
+	<input type="button" value="확인" onclick= "proc2()">
+	<br>
+	<div id ="result2"></div> 
+
+</div>
+</body>
+</html>

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<link rel="stylesheet" href="../css/public.css">
+<style>
+div{
+	border:1px dotted green;
+	height: 150px;
+}
+</style>
+<script type="text/javascript">
+ function proc1() {
+	 input1= parseInt(prompt("첫번째숫자입력"));
+	 
+	 input2= prompt("기호를 입력");
+	 
+	 input3= parseInt(prompt("두번쨰숫자를 입력"));
+	 
+	 res="첫번째숫자:"+input1+"<br>";
+	 res+="기호:"+input2+"<br>";
+	 res+="두번째숫자:"+input3+"<br>";
+	 
+		if(input2=="+"){
+			calc=input1+input3;
+		}else if(input2=="-"){
+			calc= input1-input3;
+		}else if(input2=="/"){
+			calc=input1/input3;
+		}else if (input2=="*"){
+			calc= input1*input3;
+		}
+		res += "결과:" +input1+""+input2+""+input3 +"="+ calc;
+		//백틱
+		res+=`결과: ${input1} ${input2} ${input3} = ${calc}`
+		result=document.getElementById('result');
+		result.innerHTML=res;
+		result.style.fontSize="1.5em";
+	
+}
+</script>
+</head>
+<body>
+<pre>
+	확인버튼 클릭하면 proc1()함수호출
+	두개의 수와 연산자 하나를 입력받는다 -prompt 이용
+	
+	연산자의 종류에 따라서 각 연산을 수행한다.
+	
+	백틱, backquote , backtic,grave ,accent,
+	템플릿 리터럴: script에서 backtic()을 사용하여 문자열을 표현한 것을
+	 템플릿 리터럴이라고한다
+	 
+	 일반문자열은 각 문자열("",'')과 변수 사이를 +기호를 사용하여 문자열을 구성한다.
+	 ` 문자열 변수 ${변수} 문자열 문자열 ${변수} `
+</pre>
+
+<input type="button" value="확인" onclick= "proc1()"><br><br>
+
+<div id= "result"></div>
+</body>
+</html>

@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<link rel="stylesheet" href="../css/public.css">
+<style>
+body{
+	margin: 20px;
+}
+ table{
+ 	border: 10px soild black;
+ 	
+ 	border-collapse: collapse;
+ }
+td{
+	
+	width:200px;
+	height: 30px;
+}
+caption {
+	font-size: 1.5em;
+}
+th{
+	background: lightgray;
+	font-size: 15px;
+}
+#pum{
+	
+	width: 100px;
+}
+#pri{
+	
+	width: 110px;
+}
+#qty{
+	width: 150px;
+}
+#su{
+	width:160px;
+}
+#sum{
+	width: 70px;
+}
+#hap{
+	width: 90px;
+}
+</style>
+</head>
+<body>
+
+<table border="1">
+<caption><a href="./website.html">shoping cart</caption>
+	<tr>
+		<th id= "pum">품목</th>
+		<th id= "pri">가격</th>
+		<th id= "su">수량</th>
+		<th>합계</th>
+	</tr>
+	<tr>
+		<td id= "pum">컴퓨터 세트</td>
+		<td id= "pri">2,000,000원</td>
+		<td id= "su"><input type= "number" value ="0" min="1" max="100" step="1" name ="qty" id="qty"></td>
+		<td id="hap"><input type= "text" id= "sum"></td>
+	</tr>
+	<tr>
+		<td id= "pum">티셔츠</td>
+		<td id= "pri">50,000원</td>
+		<td id= "su"><input type= "number" value ="0" min="1" max="100" step="1" name ="qty" id="qty"></td>
+		<td id="hap"><input type= "text" id= "sum"></td>
+	</tr>
+	<tr>
+		<td id= "pum">음악파일</td>
+		<td id= "pri">1,000원</td>
+		<td id= "su"><input type= "number" value ="0" min="1" max="100" step="1" name ="qty" id="qty"></td>
+		<td id="hap"><input type= "text" id= "sum"></td>
+	</tr>
+	<tr>
+		<td id= "pum">영화파일</td>
+		<td id= "pri">5,000원</td>
+		<td id= "su"><input type= "number" value ="0" min="1" max="100" step="1" name ="qty" id="qty"></td>
+		<td id="hap"><input type= "text" id= "sum"></td>
+	</tr>
+
+</table>
+<br>
+	<button type ="button">확인</button>
+	<button type ="button">구매</button>
+	<input type="reset">
+	<br>
+	<br>
+	<br>
+	<a href="./website.html">back to home</a>
+</div>
+</body>
+</html>

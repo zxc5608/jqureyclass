@@ -1,0 +1,36 @@
+@charset = "UTP-8";
+
+pre{
+	  padding : 10px ,20px, 50px;
+	  background: rgba(50%,57%,55%,0.2);
+	  border-top: 2px solid blue;
+	  border-bottom : 5px double blue;
+	  font-size : 1.5em;
+	  
+	}
+	
+.box{
+	border: none;
+	background: #efefef;
+	margin: 10px; 
+	height: auto;
+	padding: 10px;
+	
+}
+.box div{
+	border:1px dotted green;
+	height: auto;
+	padding :10px;
+	margin : 5px;
+}
+.box input[type=button], .box button,
+.box input[type=reset], .box input[type=submit]{
+	width:120px;
+	background: blue;
+	color: white;
+	padding :5px 10px;
+	border-radius: 50px;
+	font-weight: bold;
+	margin-top: 20px;
+	margin-bottom: 20px;
+}

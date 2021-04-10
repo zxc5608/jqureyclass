@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<link rel="stylesheet" href="../css/public.css">
+<style>
+.box button{		<!-- 외부에서 줄땐 .box  -->
+}
+</style>
+<script type="text/javascript">
+function proc1() {
+	res="href="+location.href+"<br>";
+	res+="protocol: "+ location.protocol+"<br>";
+	res+="host: "+ location.host+"<br>";
+	res+="hostname: "+ location.hostname+"<br>";
+	res+="port: "+ location.port+"<br>";
+	
+	document.getElementById('result1').innerHTML=res;
+}
+function proc2() {
+	location.href= 'test.jsp';
+	
+}
+function gopage() {
+	location.href= 'test.jsp?code=2&name=홍길동';
+}
+function replaceProc() {
+	location.replace('test.jsp');
+}
+function reloadProc() {
+	str = ["Hello!!","javascript","HTML","css","JQuert","good~"];
+	//str[0],str[4],str[2]
+	rand=Math.floor(Math.random()*str.length);
+	
+	res="<h1>"+str[rand]+"</h1>";
+	document.getElementById('result2').innerHTML=res;
+	document.getElementById('result2').style.color='red';
+	
+	setTimeout(function(){
+		location.reload();
+	},1000);
+	
+	
+}
+</script>
+</head>
+<body>
+
+<div class="box">
+	<h3>location</h3>
+	
+	url의 정보를 얻는다<br>
+	href: url전체정보
+	protocal:인터넷규약 http
+	host: hostname+port
+	hostname:server이름
+	port:데이터의 출입구
+	<input type="button" value="확인" onclick= "proc1()">
+	<br>
+	<div id ="result1"></div> 
+
+</div>
+
+<div class="box">
+	<h3>location</h3>
+	
+	-자동으로 특정페이지로 이동할때 사용
+	<input type="button" value="페이지이동" onclick= "proc2()">
+	<br>
+	
+	-a 태그에서  이용- 함수호출 javascript:(함수명)
+	<a href="javascript:gopage()">공지사항 목록</a><br>
+	
+	-이벤트 서버전송 (get)- location.href = 페이지이름
+	<button type="button" onclick="location.href='test.jsp?code=1&name=korea'">공지사항 목록</button><br>
+
+	
+	-새로운문서로 대체 -location.replace(페이지이름)<br>
+	-replace()메소드는 현재 페이지를 대체 하기 때문에 뒤로 아이콘이 비활성화된다
+	<button type="button" onclick="replaceProc()">공지사항 목록</button><br>
+	
+	-현재문서를 다시 리로드<br>
+	 문자열을 배열로 생성하고 랜덤으로 발생하여 문자열을 선택한다.<br>
+	선택된 문자열을 result2에 출력하고 1초후에 원래 문서로 돌아온다.<br>
+	
+	<button type="button" onclick="reloadProc()">페이지 재호출</button><br>
+	<div id ="result2"></div> 
+
+</div>
+</body>
+</html>

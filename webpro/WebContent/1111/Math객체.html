@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<link rel="stylesheet" href="../css/public.css">
+<style>
+</style>
+<script>
+
+    rand= Math.floor(Math.random()*100+1)-1;
+	count = 0;
+	ins = "";
+	window.onload=function(){ //in이 만들어진 후에 쓰라는 function
+		document.getElementById('in').value.focus();
+		
+	}
+	
+function proc1() {
+	res="";
+	count++;
+	invalue= document.getElementById('in').value.trim();
+	ins+=invalue+" ";
+	//console.log('rand'+rand+"invalue="+invalue);
+	
+	res="";
+		//90
+	if(invalue == rand){
+		res= "랜덤:"+ rand+"<br>";
+		res+= ins+"<br>";
+		res+= count+"번 입력해서 맞췄습니다."
+	}else if(invalue > rand){
+		res+= "더 작은 수로 입력"
+	}else {
+		res+="더큰수를입력하세요"
+	}
+		//출력
+		document.getElementById('in').value ="";
+		
+		document.getElementById('result1').innerHTML=res;
+}
+
+
+</script>
+</head>
+<body>
+
+<div class="box">
+	<h3>Math</h3>
+	
+	랜덤수를 발생하여 맞추는 프로그램<br>
+	랜덤은 1~100사이 Math.random()*100+1 <br>
+	힌트와 count구하기 <br>
+	<input type ="text" id= "in"><br>
+ 	<input type="button" value="숫자추측" onclick= "proc1()">
+	<br>
+	<div id ="result1"></div> 
+
+</div>
+</body>
+</html>

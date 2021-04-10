@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<link rel="stylesheet" href="../css/public.css">
+<style>
+</style>
+<script>
+ function proc1() {
+	
+	document.getElementById('ff');
+	//document.querySelector('#ff');
+	
+	
+	vname = document.getElementById('name');
+	addr = document.getElementById('addr');
+	bir =  document.getElementById('birthday');
+	mail =  document.getElementById('email');
+	id =  document.getElementById('userid');
+	tel =  document.getElementById('phone');
+	pass =  document.getElementById('pass');
+	
+	
+		//alert("submit");
+		
+		nvalue= vname.value.trim().length;
+		
+		avalue= addr.value.trim().length;
+		bvalue= bir.value.trim().length;
+		mvalue= mail.value.trim().length;
+		ivalue= id.value.trim().length;
+		tvalue= tel.value.trim().length;
+		pvalue= pass.value.trim().length;
+	
+		if(nvalue < 1){
+			alert("이름 입력");
+			return false;
+		}
+		
+		//이름길이2~5
+		if(nvalue < 2 || nvalue > 4){
+			alert("이름 2~4사이로 입력")
+			return false;
+		}
+		//정규식체크
+		//정규식
+		nameReg = /^[가-힣]{2,4}$/;
+		if(!(nameReg.test(vname.value))){
+			alert("이름형식오류!..");
+			return false;
+		}
+		
+		//주소  공백 
+		
+		if(avalue < 1){
+			alert("주소 입력");
+			return false;
+		}
+		//생일공백
+		if(bvalue < 1){
+			alert("생일 입력");
+			return false;
+		}
+		//메일공백
+		if(mvalue < 1){
+			alert("이메일 입력");
+			return false;
+		}
+			//메일정규식 asd123@assdsad.com  , ASDFAS12@fsfs.co.kr;
+			mailReg= /^[A-Za-z0-9_-]+@[A-Za-z0-9_-]+(\.[a-zA-Z]+){1,2}$/;
+			if(!(mailReg.test(mail.value))){
+				alert("메일 형식오류")
+			}
+			
+		//아이디 길이 6~8
+		if(ivalue < 6|| ivalue >8){
+			alert("아이디 6~8");
+			return false;
+		}
+		
+		//정규식 영문 소문자로 시작한다. 
+		idReg=/^[a-z][a-zA-Z0-9]{5,7}/;
+		if(!(idReg.test(id.value))){
+			alert("아이디형식오류");
+			return false;
+		}
+		
+		
+		//비밀번호
+		if(pvalue<1){
+			alert("비밀번호 입력..");
+			return false;
+			
+		}	
+		//길이- 8~15
+		if(pvalue < 8 || pvalue > 15){
+			alert("비밀번호 8~15 사이 입력");
+			return false;
+		}
+		
+		// 정규식
+		// ?= :기준문자: 기준문자를 기준으로해서 전방 (앞의) 탐색으로 검색한다.
+		// a= http://www.naver.com  https://www.daum.net
+		// http 인지 https인지 비교한다. - 해당문자를 직접가져온다.-value.match(reg)
+		// match():수행후 해당문자가 있으면 문자를 가져오고 없으면 null을 리턴한다.
+		
+		/*
+		a= "https://www.naver.com"  
+		reg= /\w+(?=:)/
+		b = a.match(reg)
+		if(b== "http"){
+			alert("http요청입니다");
+		}else if(b == "https"){
+			alert("https요청입니다");
+		}
+*/
+		
+		//정규식 - 전방탐색응용 -영문 소문자 대문자 숫자 특수문자가 반드시 한개 이상씩 포함된다.
+		
+		passReg =  /^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[!@#$%^&*]).{8,15}$/
+		if(!(passReg.test(pass.value))){
+			alert("비밀번호 형식오류");
+			return false;
+		}
+		
+		
+		
+		
+		
+		
+		
+
+		//전화번호공백
+		if(tvalue < 1){
+			alert("전화번호 입력");
+			return false;
+		}
+		//전화번호 정규식
+		telReg=/\d{3}-\d{3,4}-\d{4}/
+		if(!(telReg.test(tel.value))){
+			alert("전화번호 형식오류입니다.");
+			return false;
+		}
+		
+		
+		
+		alert("성공");
+	
+}
+	
+	
+</script>
+</head>
+<body>
+
+<div class="box">
+	<h3>데이터 길이/공백검증</h3>
+	trim() : 앞 뒤 공백을 제거한다<br>
+	length <br>
+	<h3> 정규식: 일정한 규칙에 따라 데이터를입력</h3>
+	정규식패턴.test(입력값)- return 결과형 true/false<br>
+	
+		내용<br>
+		<h3>회원가입</h3>
+		<form id="ff" action ="test.jsp" method ="post" onsubmit ="return false;">
+			이름: <input type='text' id='name'><br> 
+			주소:<input type ='text' id='addr'><br>
+			생일: <input type='date' id='birthday'><br>
+			아이디(6-8 문자): <input type='text' id='userid'><br>
+			비밀번호:<input type="text" id ="pass"><br>
+			이메일: <input type='email' id='email'><br>
+			휴대폰: <input type='tel' id='phone'><br>
+			<input type='button' onclick="proc1()" value='확인'>
+			<br>
+		</form>
+
+	</div>
+</body>
+</html>

@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<link rel="stylesheet" href="../css/public.css">
+<style>
+img{
+	width:100px;
+	height:100px;
+}
+</style>
+<script type="text/javascript">
+function proc1() {
+	setTimeout(function(){
+		document.getElementById('result1').style.background='yellow';
+	},1000);
+	
+}
+function proc2(but) {
+	
+	but.style.display="none";
+	//rgb(240,128,200)
+	//rgb(100%,56%,89)
+	//#fdf1d4
+		
+	a = setInterval(function(){
+		console.log(a);
+		r = Math.floor(Math.random()*256);
+		g = Math.floor(Math.random()*256);
+		b = Math.floor(Math.random()*256);
+		
+		//document.getElementById('result2').style.background =
+		//		`rgb(${r},${g},${b})`;
+		
+		cr= r.toString(16);
+		cg= g.toString(16);
+		cb= b.toString(16);
+		document.body.style.background = "#"+cr+cg+cb;
+		
+		},1000);
+	
+}
+function proc3(but) {
+	clearInterval(a);
+	
+	document.getElementById('start').style.display = "inline";
+}
+function proc4() {
+	imgs=["../images/단풍.jpg","../images/셔틀콕.jpg","../images/소우주.jpg"
+		,"../images/배경1.jpg","../images/배경2.jpg","../images/국화.jpg"
+		,"../images/네이버.jpg","../images/스포츠1.jpg","../images/사막.jpg"
+		,"../images/사자.jpg"];
+	
+	//img[0],img[2],img[9],img[5]
+ 		vimg = document.getElementsByTagName('img')[0]
+	
+ 	b = setInterval(function () {
+ 		
+ 		idx = Math.floor(Math.random()*imgs.length);
+ 		
+ 		vimg.src = imgs[idx];
+ 		
+ 		start = imgs[idx].lastIndexOf("/")+1;
+ 		
+ 		end= imgs[idx].lastIndexOf(".");
+ 		
+ 		vimg.alt = imgs[idx].slice(start,end);
+		
+ 		console.log("alt="+vimg.alt);		
+	 	//document.getElementById('result4').innerHTML=vimg;
+	 	
+ 	},1000)
+}
+</script>
+</head>
+<body>
+
+<div class="box">
+	<h3>setTimeout</h3>
+	setTimeout(fn,millisec): 지정된 millisec 시간이 경과 후 fn함수를 한번실행후 종료한다<br>
+	
+	버튼을 클릭하면 1초후에 result1의 배경색을 변경한다<br>
+	
+	<input type="button" value="확인" onclick= "proc1()">
+	<br>
+	<div id ="result1"></div> 
+
+</div>
+<div class="box">
+	<h3>setTimeout</h3>
+	setTimeout(fn,millisec): 
+	지정된 millisec 시간이 경과 할때 마다 fn함수를 반복적으로 실행한다<br>
+	버튼을 클릭하면 1초후에 경과 할때 마다 result2의 배경색을 변경한다<br>
+	
+	<input id="start" type="button" value="확인" onclick= "proc2(this)">
+	<input id="stop" type="button" value="종료" onclick= "proc3(this)">
+	<br>
+	<div id ="result2"></div> 
+
+</div>
+<div class="box">
+	<h3>setTimeout</h3>
+	setTimeout(fn,millisec): 
+	지정된 millisec 시간이 경과 할때 마다 fn함수를 반복적으로 실행한다<br>
+	버튼을 클릭하면 1초후에 경과 할때 마다 result2에 출력 한다  <br>
+	
+	<input id="start2" type="button" value="확인" onclick= "proc4(this)">
+	<input id="stop2" type="button" value="종료" onclick= "proc5(this)">
+	<br>
+	<div id ="result4">
+	<img src="../images/영화2.jpg" alt="영화">
+	</div> 
+</div>
+</body>
+</html>

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style>
+	form{
+		width:500px;
+		border :1px solid blue;
+		padding: 10px;
+		margin: 10px;
+	}
+	label{
+	 	display: inline-block;
+	 	width:100px;
+	 	height:30px;
+	 	}
+</style>
+<script type="text/javascript">
+
+function proc1() {
+	
+	var name = document.ff.name.value
+	var area = document.ff.name.value
+	
+	area= area.replace(/\r/g,"").replace(/\n/g,"<br>");
+	
+}
+
+</script>
+</head>
+<body>
+ 
+	<h1>이메일 전송화면</h1> 
+ 	<form action ="input1.jsp" method="post">
+	<label>이름:</label><input name="name"><br>
+	<label> 이메일:</label><input name="addr"><br>
+ 	내용:<br>
+ 	<textarea name="area" rows="10" cols="50"></textarea>
+ 	<br>
+ 	<input type="submit" value="전송" onclick="proc1()">
+ 	<input type = "reset" value="취소" onclick="proc1()"> 	
+ 	</form><br>
+ 	
+ 	<h2>회원가입 화면</h2>
+ 	
+ <form action="input2.jsp" method="post">
+	<label>이름</label><input name="name"><br>
+	<label>주소</label><input addr="addr"><br>
+	<label>이메일</label><input email="email"><br>
+	
+	<input type="radio" name ="gend1" value="Male">Male<br>
+	<input type="radio" name ="gend1" value= "Female">Female<br>
+	
+	<input type ="submit" value="send">
+	<input type = "reset" value= "원래대로">
+ </form>
+
+</body>
+</html>

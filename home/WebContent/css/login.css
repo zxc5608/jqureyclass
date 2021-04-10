@@ -1,0 +1,56 @@
+@charset "UTF-8";
+
+body{
+
+	min-width: 1500px;
+}
+.logo{     /*로고  */
+	width: 200px;
+	height: 70px;
+	margin-left: 50px;
+}
+
+#yellow{ /*캐릭터 */
+	width: 200px;
+	height: 200px;
+}
+
+
+.formgroup{ /*무제한 시청텍스트  */
+	margin-top:200px;
+	text-align: center;
+
+}
+#ebtn{ 	/*이메일 버튼  */
+	background: red;
+		color: white;
+}
+
+
+.formcontrol{
+	width: 450px;
+	height: 60px;
+	font-size:20px;
+	margin-top: 50px;
+	
+	
+}
+.email-label{
+	font-size: 38px;
+	
+}
+.ediv{
+		text-align: center;
+}
+
+
+#modalzip{
+	float: right;
+	
+	color: white;
+	background: red;
+	width:90px;
+	height:40px;
+	font-size: 20px;
+	margin-right: 50px;
+}

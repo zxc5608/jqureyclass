@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<link rel ="stylesheet" href = "../css/public.css">
+<style>
+ 
+ table{
+ 	border: 10px outset blue;
+ 	margin:20px;
+ 	border-collapse: collapse;
+ }
+ td,th{
+ 	width:150px;  
+ 	height:50px;  
+ 	
+ }
+ td{
+ 	text-align : center;  
+ }
+ th{
+ 	background: lightblue;
+ }
+ #second{
+ 	border : 5px solid red;
+ }
+ #second th{
+ 	background: lightpink;
+ 	width:200px;
+ }
+ #second caption{
+ 	font-size :2.0em;
+ 	caption-side : bottom;
+ 	background: red;
+ }
+</style>
+</head>
+<body>
+<pre>
+table: 표형태의 데이터를 표현
+	속성: border= 1
+tr: row, 한줄
+td: 데이터 , 한칸
+th: 데이터의제몯
+caption : 테이블의 제목
+ 
+ 여러개의 table 스타일을 각각 다르게 지정하기 위해서 id를 부여
+ table th: table의  후손 th를 선택한다. 
+ table > tr : table의 자식 tr을 선택한다.
+
+</pre>
+
+<table id="first" border="1">
+<caption>vip리스트</caption>
+
+<tr>
+	<th>이름</th>
+	<th>주소</th>
+	<th>전화번호</th>
+</tr>
+
+<tr>
+	<td>홍길동</td>
+	<td>서울</td>
+	<td>010-1112-1234</td>
+</tr>
+
+<tr>
+	<td>개나리</td>
+	<td>대전</td>
+	<td>010-1112-1234</td>
+</tr>
+
+<tr>
+	<td>진달래</td>
+	<td>서울</td>
+	<td>010-1212-1234</td>
+</tr>
+</table>
+
+<!--<br><br> 또는 margin-->
+<table id="second" border="1">
+<caption>고객리스트</caption>
+
+<tr>
+	<th>이름</th>
+	<th>주소</th>
+	<th>전화번호</th>
+</tr>
+
+<tr>
+	<td>홍길동</td>
+	<td>서울</td>
+	<td>010-1112-1234</td>
+</tr>
+
+<tr>
+	<td>개나리</td>
+	<td>대전</td>
+	<td>010-1112-1234</td>
+</tr>
+
+<tr>
+	<td>진달래</td>
+	<td>서울</td>
+	<td>010-1212-1234</td>
+</tr>
+</table>
+
+</body>
+</html>

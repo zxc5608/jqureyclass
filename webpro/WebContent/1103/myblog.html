@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<link rel="stylesheet" href="../css/public.css">
+<style>
+
+p{
+	width: calc(96% - 1%);
+	height : calc(44% - 1%);
+	border: 5px dotted green;
+	background: lightgreen;
+	border-radius: 20px;
+	margin: 20px;
+	box-sizing: border-box;
+}
+img{
+	
+	box-sizing: border-box;
+	margin : 20px;
+	width: calc(40%);
+	height: 100px;
+}
+h1{
+	font-size: 20px;	
+}
+div{
+	margin: 2px;
+	padding: 3px;
+	box-sizing: border-box;
+	border-radius: 20px;
+}
+#header{
+	height: 120px;
+/* 	background: yellow; */
+	background-image: linear-gradient(white, pink);
+	border: 1px solid gray;
+	border-radius: 20px;
+	text-align: center;
+}
+#nav{
+	width: calc(25% - 1%);
+	height: 500px;
+	float: left;
+ 	background: rgb(40%, 48%, 33%); /*#f2d4e5; */
+}
+#content{
+	width: calc(75% - 1%);
+	height: 500px;
+	float: right;
+	background: rgb(50%, 50%, 49%); /*#f2d4e5; */
+}
+#footer{
+	height: 80px;
+	background: rgb(58% 91% 13%);
+	clear: both;
+	text-align: center;
+	margin-top : 20px;
+}
+	span{
+	text-align: center;
+	font-size : 1.5em;
+}
+
+</style>
+</head>
+<body>
+<div id="header">
+<h1>MY Blog page</h1><br>
+시멘틱 태그로 만들어진 페이지입니다
+</div>
+<div id="nav">
+<h1>Link</h1>
+<hr>
+	<ul>
+		<li><a href='http://www.w3school.com'><strong>w3school</strong></a></li>
+		<li><a href='http://www.naver.com'>naver</a></li>
+		<li><a href='http://www.daum.net'>daum</a></li>
+	</ul>
+	<img src="../images/음악1.jpg">
+
+
+</div>
+<div id="content">
+<p>
+<br><br>
+<span>시멘틱요소</span><br>
+<br>
+시멘틱 요소들은 브라우저에 요소의 의미나 목적을 명확하게 알려주는요소이다
+레이아웃을 만들때 쓰는것 의미가있는요소라면 div보다는 시멘틱태그를 사용해준다
+<br><br><br>
+</p>
+
+<p>
+<br><br>
+<span>div와 span</span><br>
+<br>
+시멘틱 요소들은 브라우저에 요소의 의미나 목적을 명확하게 알려주는요소이다
+레이아웃을 만들때 쓰는것 의미가있는요소라면 div보다는 시멘틱태그를 사용해준다
+<br><br><br>
+</p>
+
+</div>
+<div id="footer"><br>
+Copyright (C)2019 ahn
+</div>
+</body>
+</html>

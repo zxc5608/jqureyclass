@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<link rel="stylesheet" href="../css/public.css">
+<style>
+</style>
+<script type="text/javascript">
+str=["#","!","?",",","%"];
+	rnd= Math.floor(Math.random()* str.length);
+	text=document.createTextNode(str[rnd]);
+function proc1() {
+	
+	//랜덤발생-str[0],str[3],str[6] -문자열선택
+	//선택된문자열로 textNode를 생성
+	
+	//p태그생성
+	ptag=document.createElement("p");
+	
+	//text를 p태그에 추가한다.
+	
+	ptag.appendChild(text);
+	
+	
+	//result1에 p태그를 추가한다.
+	result1 = document.getElementById('result1');
+	result1.appendChild(ptag);
+	
+}
+function proc2() {
+	//부모 요소를 접근한다 -result1
+	result1= document.getElementById("result1")
+	//부모요소 . 첫번째 (마지막)자식을 얻는다.
+	child=result1.lastChild;
+	//삭제 -  부모요소.removeChild(자식요소)
+	result1.removeChild(child);
+	
+}
+function proc3() {
+	text=document.createTextNode(str[rnd]);
+	
+	//input 생성<input type="button" value ="삭제" onclick="">
+	input= document.createElement('input');
+	input.type="button";
+	input.value="삭제";
+	input.onclick=function(){
+		//삭제버튼누르면지운다.
+		//현재 노드(button)의 부모노드를 반환한다.
+		parentp= this.parentNode;
+		//parentp 는 result3의 자식 
+		parentp.remove();  //result3에서 삭제된다.
+		
+	};
+	
+	//p태그생성
+	ptag= document.createElement("p");
+	
+	//text를 ptag에 추가한다
+	ptag.appendChild(text);
+	
+	//input 태그를 ptag에 추가한다
+	
+	ptag.appendChild(input);
+	
+	//result2에 ptag를 추가한다. 	
+	result2 = document.getElementById('result2');
+	result2.appendChild(ptag);
+}
+</script>
+</head>
+<body>
+
+<div class="box">
+	<h3>추가/삭제</h3>
+	
+	추가: 배열로 문자열 생성, 랜덤 발생으로 문자열 선택<br>
+	선택한 문자열로textnode를 생성<br>
+	p태그를 생성 -createElement("p")<br>
+	p태그의 자식요소로 textnode를 추가한다.<br>
+	result1의 자식요소로 p태그를 추가한다.
+	result1에 출력
+	
+	삭제: 
+	child= result1.lastchild<br>
+	result1.removeChild(child);<br>
+	
+	<input type="button" value="추가" onclick= "proc1()">
+	<input type="button" value="삭제" onclick= "proc2()">
+	
+	<br>
+	<div id ="result1"></div> 
+
+</div>
+
+
+<div class="box">
+	<h3>추가/삭제</h3>
+	
+	추가: 배열로 문자열 생성, 랜덤 발생으로 문자열 선택<br>
+	선택한 문자열로textnode를 생성<br>
+	button요소를 생성 -creatElement('input')<br>
+	
+	
+	p태그를 생성 -createElement("p")<br>
+	p태그의 자식요소로 textnode와 button요소를 추가한다.<br>
+	
+	
+	result2의 자식요소로 p태그를 추가한다.
+	
+	
+	삭제: 
+	child= result1.lastchild<br>
+	result1.removeChild(child);<br>
+	
+	삭제:
+	부모요소.remove :부모요소에서 선택한 자신요소를 삭제한다.
+	
+	<input type="button" value="추가/삭제" onclick= "proc3()">
+	
+	
+	<br>
+	<div id ="result2"></div> 
+
+</div>
+
+</body>
+</html>

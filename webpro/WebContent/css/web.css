@@ -1,0 +1,117 @@
+@charset "UTF-8";
+body{
+
+	min-width: 1500px;
+}
+#logo{
+	position: absolute;
+	height:120px;
+	width:150px;
+	text-decoration: none;
+	text-align: left;
+	color: white;
+	font-style: bold;
+}
+img{
+	width: 150px;
+	height: 120px;
+}
+#header{
+	height: 120px;
+	background: #270407;
+	}
+
+ a{
+	text-decoration: none;
+	color: black;
+}
+#na{
+	
+	list-style-type: none;
+	border : 3px solid gray;
+	padding: 5px;
+	height: 70px;
+ 	padding-left: 15%;
+	border-left: none;
+	border-right:none;
+	letter-spacing: 15px;
+}
+#na #av{
+
+	float : left;
+	margin: 20px;
+	padding: 10px;
+	
+}
+
+#nav{
+	display: inline;
+	
+}
+
+table{
+	
+	float: left;
+	
+}
+td{
+	width: 200px;
+	height: 30px;
+}
+#tap{
+	background: lightgray;
+}
+#tap1{
+	background: gray;
+}
+#main{
+	float: left;
+	
+	
+}
+
+#article1 iframe{
+	width: 900px;
+	height: 500px;
+	margin-left: 30px;
+	background: #E5ECD5;
+}
+
+table{
+	border:1px solid gray;
+	height: 300px;
+}
+#cate{
+	
+	background: #F1EEDE;
+	height: 500px;
+	width: 220px;
+	float:left;
+	margin-left: 100px;
+}
+#cart{
+	text-decoration: underline; 
+	color: purple;
+}
+#right{
+	position : absolute;
+	
+	left :1300px;
+	float: right;
+	
+	width: 230px;
+	height: 500px;
+	text-align: center;
+	background: #F1EEDE;
+}
+h4{
+	font-size: 1.5em
+}
+#footer{
+	height: 80px;
+	background: #270407;
+	clear: both;
+	text-align: center;
+	margin-top : 32%;
+	color:white;
+}

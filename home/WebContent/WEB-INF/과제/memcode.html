@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<link rel="stylesheet" href="../css/public.css">
+<style>
+
+label{
+		display: inline-block;            /*인라인 요소라 디스플레이 적용*/
+		width : 120px;
+		height: 30px
+}
+legend{
+	font-size: 1.5em;
+	
+}
+fieldset {
+	width:400px;
+	padding: 30px;
+}
+
+
+</style>
+</head>
+<body>
+<fieldset>
+<legend>회원가입</legend>
+<label>아이디</label>  <input type="text" name ="id">&nbsp;<button type = "button">중복검사</button><br>
+<label>패스워드</label>  <input type="password" name ="pass"><br>
+<label>패스워드 확인</label>  <input type="password" name ="pass"><br>
+<label>이름</label>  <input type="name" name ="name"><br>
+<label>휴대폰번호</label>  <input type="tel" name ="tel"><br>
+<label>이메일</label>  <input type="email" name ="email"><br>
+<label>생일</label>  <input type="date" name ="bir"><br>
+<label>홈페이지</label>  <input type="home" name ="home"><br>
+
+<label>성별</label>
+<input type="radio" name ="gender" value ="남자">남성
+<input type="radio" name ="gender" value ="여자">여성 <br>
+</fieldset>
+<br>
+<input style="width:150px;" type="submit">
+<input style="width:150px;" type="reset">
+<br><br>
+<a href="./website.html">go home</a>
+
+</body>
+</html>

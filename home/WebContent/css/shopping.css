@@ -1,0 +1,153 @@
+@CHARSET "UTF-8";
+	
+@import url('https://fonts.googleapis.com/css?family=Nanum+Gothic|Nanum+Myeongjo&display=swap&subset=korean'); 
+
+
+	
+	body {
+		min-width: 1800px;
+		padding: 30px;
+	    font-family: 'Nanum Myeongjo', serif; 
+	}
+	
+	header {
+		padding: 50px;
+		background-color: black;
+		text-align: center;
+	}
+	
+	#home {
+		letter-spacing: 15px;
+		font-size: 3.5em;
+		color: white;
+		font-family: 'Nanum Myeongjo', serif;
+		
+	}
+	
+	.menu {
+		min-width: 70px;
+		padding: 10px;
+		margin: 20px;
+		letter-spacing: 10px;
+		text-align: center;
+	}
+	
+	#left {
+		background-color: black;
+		float: left;
+		height: 600px;
+		text-align: center;
+		width: calc(15% - 1%);
+/* 		border-radius: 10%; */
+		font-size: 20px;
+		letter-spacing: 5px;
+		padding-bottom: 15px;
+	}
+	
+	ul {
+		margin: 20px;
+		padding-left: 0px;
+	}
+	
+	.clist {
+		margin-top: 20px;
+		height: 30px;
+		padding: 5px 0px 5px 5px;
+		margin-bottom: 10px;
+		font-size: 17px;
+		list-style: none;
+		background-color: #fdfdfd;
+		border-radius: 10%;
+		font-family: 'Nanum Gothic', sans-serif;
+	}
+	
+	}
+	.ca {
+		color: white;
+		letter-spacing: 5px;
+	}
+	
+	a{
+		color: black;
+		padding: 20PX;
+		font-size: 1.2em;
+	}
+	.a{
+		padding-left: 40px;
+	}
+	
+	a:link {
+		color: black;
+		text-decoration: none;
+	}
+	
+	a:ACTIVE {
+		color : #a30d2d;
+	}
+	
+	#right {
+		text-align: center;
+		background-color: #f9cdad;
+		height: 600px;
+		float: left;
+		width: calc(13% - 1%);
+		padding: 40px;
+		margin: 20px 20px 20px 65px;
+		border-radius : 15%;
+	}
+	
+	.Cart {
+		border: 1px dotted white;
+		padding: 10px;
+		margin-top: 10px;
+		letter-spacing: 5px;
+	}
+	
+	#cartview {
+		color: #a30d2d;
+		text-decoration: underline;
+	}
+	
+	.login {
+		margin: 20px 10px 10px 10px;
+/* 		padding: 10px; */
+		letter-spacing: 4px;
+	}
+	
+	#ca{
+		margin-top : 70px;
+		color : #bb4440;
+	
+	}
+	label {
+		display: inline-block;
+		padding: 10px;
+		font-size: 1.2em;
+	}
+	
+	#log {
+		margin: 10px;
+	}
+	
+	section {
+		float: left;
+	}
+	
+	iframe {
+ 		margin-left: 25px; 
+		width: 1100px; 
+ 		height: 700px; 
+		border: none;
+		padding: 15px;
+	}
+	
+	.footer {
+		padding: 20px 20px 20px 50px;
+		background: #e8e6e6;
+ 		clear: both;
+		margin : 20px 50px 20px 20px;
+	}
+	
+	p {
+		font-family: 'Nanum Gothic', sans-serif;
+	}

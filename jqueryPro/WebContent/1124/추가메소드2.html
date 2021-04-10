@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<link rel="stylesheet" href="../css/public.css">
+
+
+<script src="../js/jquery-3.5.1.min.js"></script>
+<style>
+</style>
+<script>
+ $(function(){
+	$('#result1 p').on('click',function(){
+		vtext = $(this).text();
+		
+		$('<img>',{
+				'src': '../images/'+ vtext + '.jpg',
+				'alt': vtext,
+				'width': '100px',
+				'height':'100px'
+		}).appendTo(this);
+	})
+	$('#result2 p').on('click',function(){
+		vtext = $(this).text();
+		
+
+		vimg = $('<img>',{
+				'src': '../images/'+ vtext + '.jpg',
+				'alt': vtext,
+				'width': '100px',
+				'height':'100px'		
+		});
+		//$(this).append(vimg)
+		//$(vimg).appendTo(this)
+		
+		//$(this).after(vimg);
+		//$(vimg).insertAfter(this)
+		
+		$(this).before(vimg);
+		//$(vimg).insertbefore(this)
+		
+		
+	})
+})
+</script>
+</head>
+<body>
+
+<div class="box">
+	<h3>이미지추가하기</h3>
+	
+	append(content)/ appendTo(selector): 해당 selector내부의 뒤로 추가<br>
+	prepend(content)/prependTo(selector):해당 selector내부의 앞으로 추가<br>
+	<br>
+	<div id ="result1">
+	<p>셔틀콕</p>
+	<p>대나무숲</p>
+	<p>가구1</p>
+	<p>가구2</p>
+	<p>코알라</p>
+	<p>호랑이2</p>
+	</div> 
+
+</div>
+
+
+<div class="box">
+	<h3>이미지추가하기</h3>
+	
+	after(content)/insertAfter(selector):해당 selector 외부의 뒤로추가<br>
+	Before(content)/insertBefore(selector):해당 selector외부의 앞으로 추가<br>
+	<br>
+	<div id ="result2">
+	<p>셔틀콕</p>
+	<p>대나무숲</p>
+	<p>가구1</p>
+	<p>가구2</p>
+	<p>코알라</p>
+	<p>호랑이2</p>
+	</div> 
+
+</div>
+</body>
+</html>

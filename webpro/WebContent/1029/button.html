@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<link rel="stylesheet" href="../css/public.css">
+
+<style>
+
+ select{
+ 	width: 200px;
+ }
+ div{
+ 	border: 1px dotted orange;
+ 	padding: 10px;
+ }
+ form{
+ 	width: 50%;
+ 	padding: 5px;
+ 	border: 1px solid blue;
+ 	box-sizing: border-box;
+ 	margin-left: 5%;
+ }
+ textarea{
+ 	width: calc(100%-1%);
+ }
+ 
+</style>
+
+<script type="text/javascript"> /*타입은 생략가능*/
+//변수선언: var 변수명,   let변수명 , const변수명 
+function proc1() {
+	var name = document.ff.name.value
+	var area = document.ff.area.value
+	
+	
+	area = area.replace(/\r/g,"").replace(/\n/g,"<br>");   /*//g 글로벌  전체역역 사이에*/
+	/*ECMAScript
+	표준 no -es2, es4, es6(2016), es8*/
+	//alert(name + "\n"+area);
+	
+	
+	
+	sel = document.ff.fruit.options.length;
+	
+	var res="<h1>실행결과 </h1>";
+	res += "이름:"+name+"<br>";
+	res += "내용:<br>"+area+"<br>";
+	res += "좋아하는과일:<br>";
+	for(var i=0;i<sel;i++){
+		if(document.ff.fruit.options[i].selected){
+			res += document.ff.fruit.options[i].value+" ";		
+		}
+	}
+//	alert(res);
+	
+	
+	
+	
+	document.querySelector('#result').innerHTML= res;  /*textcontent를 찍으면 출력하고자하는 html태그도 문자취급함*/
+																
+}
+
+function proc2() {
+	document.ff.submit(); // jsp가 수행
+}
+</script>
+
+</head>
+<body>
+<pre>
+여러줄 입력: &lt;textarea &gt; &lt;/textarea &gt;
+
+기능이없다. onclick=""에 의해서 가능을 부여한다.
+&lt;button type="button">&lt;/button>
+
+전송 기능을 수행
+&lt;button>전송&lt;/button>	
+&lt;button type="submit">
+
+select 요소의 선택한 값 전달
+jsp: String sel[] = request.getparameterValues("fruit")  -sel[i]
+script : document.ff.fruit.options[i].value
+</pre>
+<form name="ff" action ="buttonsend.jsp" method="post">
+이름<input name ="name"><br> <!-- input타입은 텍스트 -->
+남기고 싶은말<br>
+<textarea name="area" rows="10" cols="90"></textarea>  <!-- row 밑으로 cols옆으로 -->
+	
+<br>
+좋아하는 과일<br>
+<select name="fruit" multiple size="6"> <!--multiple 여러개를 선택할수있다.  -->
+	<option value="사과">사과</option>
+	<option value="복숭아" selected>복숭아</option>
+	<option value="바나나">바나나</option>
+	<option value="참외">참외</option>
+	<option value="수박" selected>수박</option>
+	<option value="오렌지">오렌지</option>
+</select>
+<br><br>  <!--버튼종류 -->
+<button type="button" onclick="proc1()">확인</button>-proc1()함수호출.script에서 결과실행<br> 
+<button type="button" onclick="proc2()">확인전송</button>-proc2()함수호출해서 함수내에서 submit을 실행<br>
+<button type="submit">전송</button>  - 직접 form의 action=buttonsend.jsp이 실행 되어 결과발생<br>
+<button type= "reset">취소</button>
+<button>전송</button>  	-직접 form의 action=buttonsend.jsp이 실행 되어 결과발생<br>
+
+
+</form>
+<br><br>
+확인버튼 클릭하면 proc1()가 호출되어 실행결과를  출력한다.<br> 
+script에서 div에 접근하기위해서<br>
+
+document.getElementById('result')<br>
+document.getElementByTagName('div')[0]<br>
+ 
+document.querySelector("#result")<br>
+document.querySelector("div")<br>
+-접근요소의 출력- innerHTML/textContent<br>
+
+
+<div id="result">
+</div>
+
+</body>
+</html>
